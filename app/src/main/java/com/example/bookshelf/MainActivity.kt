@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+//showing josh how git works
 
         // Start the media player
         playBtn.setOnClickListener {
