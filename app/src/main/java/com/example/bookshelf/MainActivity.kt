@@ -20,9 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        play = findViewById(R.id.btn_play)
-//        pause = findViewById(R.id.btn_pause)
-//        stop = findViewById(R.id.btn_stop)
+//showing josh how git works
 
         // Start the media player
         playBtn.setOnClickListener {
