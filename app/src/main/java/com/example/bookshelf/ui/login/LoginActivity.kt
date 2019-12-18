@@ -14,8 +14,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.example.bookshelf.MainActivity
+
+import android.content.Intent
 
 import com.example.bookshelf.R
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -30,6 +34,17 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
+
+        // using my cheat button to try to go to next activity
+
+
+        btnStartAnotherActivity.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
+        //the rest of the code is from the default code
 
         loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
