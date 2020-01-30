@@ -17,9 +17,14 @@ import android.widget.Toast
 import com.example.bookshelf.MainActivity
 
 import android.content.Intent
-
 import com.example.bookshelf.R
+
+//import com.example.bookshelf.R
 import kotlinx.android.synthetic.main.activity_login.*
+//import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+//import android.R
+
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_login)
+        setContentView(com.example.bookshelf.R.layout.activity_login)
 
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
@@ -43,7 +48,17 @@ class LoginActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
+        //trying to implement sign in with google
 
+        // Configure sign-in to request the user's ID, email address, and basic
+        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//            .requestEmail()
+//            .build()
+
+        // Build a GoogleSignInClient with the options specified by gso.
+        //mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+//        googleSignInClient = GoogleSignIn.getClient(this, gso)
         //the rest of the code is from the default code
 
         loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
