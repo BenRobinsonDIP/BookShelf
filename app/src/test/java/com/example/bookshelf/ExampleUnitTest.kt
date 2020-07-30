@@ -1,4 +1,4 @@
-package com.example.bookshelf
+package com.fantology.bookshelf
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 /**
  * Data validation state of the login form.

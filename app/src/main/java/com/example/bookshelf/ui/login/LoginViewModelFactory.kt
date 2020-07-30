@@ -1,9 +1,9 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.bookshelf.data.LoginDataSource
-import com.example.bookshelf.data.LoginRepository
+import com.fantology.bookshelf.data.LoginDataSource
+import com.fantology.bookshelf.data.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

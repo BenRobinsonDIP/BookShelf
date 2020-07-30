@@ -1,4 +1,4 @@
-package com.example.bookshelf
+package com.fantology.bookshelf
 
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity

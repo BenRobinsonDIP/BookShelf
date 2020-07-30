@@ -1,4 +1,4 @@
-package com.example.bookshelf.data
+package com.fantology.bookshelf.data
 
 /**
  * A generic class that holds a value with its loading status.

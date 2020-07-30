@@ -1,6 +1,6 @@
-package com.example.bookshelf.data
+package com.fantology.bookshelf.data
 
-import com.example.bookshelf.data.model.LoggedInUser
+import com.fantology.bookshelf.data.model.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and

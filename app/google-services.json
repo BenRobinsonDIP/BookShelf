@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1064603942629",
+    "firebase_url": "https://fantology-bookshelf.firebaseio.com",
+    "project_id": "fantology-bookshelf",
+    "storage_bucket": "fantology-bookshelf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064603942629:android:04bc273777153ace639e0c",
+        "android_client_info": {
+          "package_name": "com.fantology.bookshelf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064603942629-grgkha6ghcccb2nqohlt9uejcoramoka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fantology.bookshelf",
+            "certificate_hash": "89789e24d9861eddf2f8e3eb3a1a7de3dc9ca478"
+          }
+        },
+        {
+          "client_id": "1064603942629-pdnp7cp0q8slj84gopa1aciqneeccv3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0yRqxui2IZ-ma2sRiwRrAHyQsIk_TG78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064603942629-pdnp7cp0q8slj84gopa1aciqneeccv3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

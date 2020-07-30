@@ -1,4 +1,4 @@
-package com.example.bookshelf.data.model
+package com.fantology.bookshelf.data.model
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

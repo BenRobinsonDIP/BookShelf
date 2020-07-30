@@ -1,4 +1,4 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 /**
  * User details post authentication that is exposed to the UI

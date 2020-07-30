@@ -1,4 +1,4 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 /**
  * Authentication result : success (user details) or error message.

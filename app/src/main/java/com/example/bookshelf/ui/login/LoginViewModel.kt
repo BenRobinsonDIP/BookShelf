@@ -1,13 +1,13 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.example.bookshelf.data.LoginRepository
-import com.example.bookshelf.data.Result
+import com.fantology.bookshelf.data.LoginRepository
+import com.fantology.bookshelf.data.Result
 
-import com.example.bookshelf.R
+import com.fantology.bookshelf.R
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 

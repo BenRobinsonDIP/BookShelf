@@ -1,4 +1,4 @@
-package com.example.bookshelf.ui.login
+package com.fantology.bookshelf.ui.login
 
 import android.app.Activity
 import androidx.lifecycle.Observer
@@ -14,12 +14,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.example.bookshelf.MainActivity
+import com.fantology.bookshelf.MainActivity
 
 import android.content.Intent
-import com.example.bookshelf.R
+import com.fantology.bookshelf.R
 
-//import com.example.bookshelf.R
+//import com.fantology.bookshelf.R
 import kotlinx.android.synthetic.main.activity_login.*
 //import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 //import android.R
@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(com.example.bookshelf.R.layout.activity_login)
+        setContentView(com.fantology.bookshelf.R.layout.activity_login)
 
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
 //            .build()
 
         // Build a GoogleSignInClient with the options specified by gso.
-        //mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 //        googleSignInClient = GoogleSignIn.getClient(this, gso)
         //the rest of the code is from the default code
 

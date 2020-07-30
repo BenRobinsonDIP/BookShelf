@@ -1,6 +1,6 @@
-package com.example.bookshelf.data
+package com.fantology.bookshelf.data
 
-import com.example.bookshelf.data.model.LoggedInUser
+import com.fantology.bookshelf.data.model.LoggedInUser
 import java.io.IOException
 
 /**
