@@ -15,9 +15,14 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.fantology.bookshelf.MainActivity
-
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import android.content.Intent
 import com.fantology.bookshelf.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 //import com.fantology.bookshelf.R
 import kotlinx.android.synthetic.main.activity_login.*
@@ -30,6 +35,7 @@ import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
@@ -52,24 +58,44 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        // [START config_signin]
+        // Configure Google Sign In
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        // [END config_signin]
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        // [START initialize_auth]
         // Initialize Firebase Auth
         auth = Firebase.auth
         // [END initialize_auth]
-        //trying to implement sign in with google
-
-        // Configure sign-in to request the user's ID, email address, and basic
-        // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-//        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//            .requestEmail()
-//            .build()
-
-        // Build a GoogleSignInClient with the options specified by gso.
-//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-//        googleSignInClient = GoogleSignIn.getClient(this, gso)
-        //the rest of the code is from the default code
 
 
     }
+
+//using this website: https://codesource.io/setting-up-google-authentication-in-a-kotlin-android-app/
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            val intent = Intent(this, MainActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+            finish()
+        }
+    }
+
+
+
+
+
+
+
+
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
@@ -85,6 +111,13 @@ class LoginActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
 }
+
+
+
+
+
+
+
 
 /**
  * Extension function to simplify setting an afterTextChanged action to EditText components.
